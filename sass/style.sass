@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap');
+$violet: #591AA9
+@mixin title()
+    font: 
+        weight: 500
+        size: 64px
+    line-height: 78px
+    letter-spacing: 0.44px
+
+@mixin text()
+    font: 
+        weight: 500
+        size: 24px
+    line-height: 36px
+    letter-spacing: 0.44px
+
+    
+
+*
+    font-family: 'Fira Sans', sans-serif;
+    color: #FFFBFF
+    text-decoration: none
+    list-style: none
+
+
+body
+    background-color: #020203
+    padding-right: 15px
+    padding-left: 15px
+
+.container
+    max-width: 1110px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.header
+    width: 100%
+    .container
+        padding: 26px 0 26px 0
+
+.log-img
+    width: 300px
+
+.menu__list
+    display: flex
+    .menu__item
+        margin-left: 50px
+        &:first-child
+            margin: 0
+        .menu__link
+            position: relative
+            font-weight: 500
+            font-size: 24px
+            line-height: 36px
+            letter-spacing: 0.44px
+            &::after
+                position: absolute 
+                content: ''
+                bottom: -10px
+                width: 0
+                display: block
+                height: 3px
+                left: 50%;
+                transform: translate(-50%);
+                transition: .3s;
+                background-color: $violet
+        &:hover
+            .menu__link::after
+                width: 100%;
+
+            
+
+.menu__btn
+    display: none
